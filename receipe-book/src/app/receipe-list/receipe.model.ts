@@ -1,6 +1,6 @@
 
 export class Receipe{
-    name: string;
+    private name: string;
     description: string;
     imagePath: string;
 

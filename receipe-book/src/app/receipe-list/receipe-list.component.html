@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-lg-5">
+    <div class="col-md-5">
         <div class="row">
             <div class="col-xs-12">
                 <button type="button" class="btn btn-success">New Recipe</button>
@@ -13,7 +13,7 @@
                         <h4 class="list-group-item-heading">{{ recipe.getName() }}</h4>
                         <p class="list-group-item-text">{{ recipe.getDescription() }}</p>
                     </div>
-                    <span style="pull-right">
+                    <span class="pull-right">
                         <img src= '{{ recipe.getImage() }}' alt="{{ recipe.getName() }}" class="img-responsive" style="max-height: 50px"> 
                     </span>
                 </a>
@@ -21,7 +21,7 @@
         </div>
         <app-receipe-item></app-receipe-item>
     </div>    
-    <div class="col-lg-7">
+    <div class="col-md-7">
         <app-receipe-detail></app-receipe-detail>
     </div>
 </div>

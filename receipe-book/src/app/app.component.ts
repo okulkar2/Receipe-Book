@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  receipeList: boolean = false;
+  shoppingList: boolean = false;
+
+  onReceipeClicked(receipeData: {clicked: boolean}){
+    this.receipeList = receipeData.clicked;
+    this.shoppingList = false;
+  }
+
+  onShoppingClicked(shoppingData: {clicked: boolean}){
+    this.shoppingList = shoppingData.clicked;
+    this.receipeList = false;
+  }
+
 }

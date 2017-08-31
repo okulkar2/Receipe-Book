@@ -5,14 +5,14 @@
                 <button type="button" class="btn btn-success">New Recipe</button>
             </div>
         </div>
-        <br>
+        <hr>
         <div class="row">
             <div class="col-xs-12">
                 <a href="#" class="list-group-item clearfix" *ngFor="let recipe of receipes">
-                    <div class="pull-left">
+                    <span class="pull-left">
                         <h4 class="list-group-item-heading">{{ recipe.getName() }}</h4>
                         <p class="list-group-item-text">{{ recipe.getDescription() }}</p>
-                    </div>
+                    </span>
                     <span class="pull-right">
                         <img src= '{{ recipe.getImage() }}' alt="{{ recipe.getName() }}" class="img-responsive" style="max-height: 50px"> 
                     </span>

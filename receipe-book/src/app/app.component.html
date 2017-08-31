@@ -1,11 +1,13 @@
 <!--The whole content below can be removed with the new code.-->
-<app-header></app-header>
+<app-header 
+  (receipeClicked) = 'onReceipeClicked($event)'
+  (shoppingClicked) = 'onShoppingClicked($event)'></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-receipe-list></app-receipe-list>
+        <app-receipe-list *ngIf = 'receipeList'></app-receipe-list>
       <br>
-      <app-shopping-list></app-shopping-list>
+        <app-shopping-list *ngIf = 'shoppingList'></app-shopping-list>
     </div>
   </div>
 </div>

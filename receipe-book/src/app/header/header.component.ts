@@ -7,14 +7,10 @@ import { Component, Output, EventEmitter } from '@angular/core'
 
 export class HeaderComponent{
 
-    @Output() receipeClicked = new EventEmitter<{clicked: boolean}>();
-    @Output() shoppingClicked = new EventEmitter<{clicked: boolean}>();
+    @Output() featureClicked = new EventEmitter<string>();
 
-    onReceipeClicked(){
-        this.receipeClicked.emit({clicked: true});
+    onSelect(value: string){
+        this.featureClicked.emit(value);
     }
 
-    onShoppingClicked(){
-        this.shoppingClicked.emit({clicked: true});
-    }
 }

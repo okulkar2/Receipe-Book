@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Receipe } from '../receipe.model'
 
 @Component({
     selector: 'app-receipe-detail',
@@ -6,4 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class ReceipeDetailComponent{
+    @Input() receipeElement: Receipe
 }

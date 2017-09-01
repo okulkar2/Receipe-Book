@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { Receipe } from '../receipe.model'
 
 @Component({
@@ -8,4 +8,9 @@ import { Receipe } from '../receipe.model'
 
 export class ReceipeItemComponent{
     @Input()element: Receipe;
+    @Output()selectedElement = new EventEmitter<void>();
+
+    onSelected(){
+        this.selectedElement.emit();
+    }
 }

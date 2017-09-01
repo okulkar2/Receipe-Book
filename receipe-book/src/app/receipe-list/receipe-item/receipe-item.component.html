@@ -1,1 +1,9 @@
-<h2> Receipe Item is working </h2>
+<a href="#" class="list-group-item clearfix">
+    <span class="pull-left">
+        <h4 class="list-group-item-heading">{{ element.getName() }}</h4>
+        <p class="list-group-item-text">{{ element.getDescription() }}</p>
+    </span>
+    <span class="pull-right">
+        <img src= '{{ element.getImage() }}' alt="{{ element.getName() }}" class="img-responsive" style="max-height: 50px"> 
+    </span>
+</a>

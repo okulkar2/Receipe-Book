@@ -1,11 +1,18 @@
 <!--The whole content below can be removed with the new code.-->
-<app-header></app-header>
-<div class="container-fluid">
+<app-header 
+  (featureClicked) = 'onFeatureSelected($event)'></app-header>
+<div class="container">
   <div class="row">
     <div class="col-md-12">
+<<<<<<< HEAD
       <app-receipe-list></app-receipe-list>
       <br>
       <app-shopping-list></app-shopping-list>
+=======
+        <app-receipe-list *ngIf = 'feature === "receipe"'></app-receipe-list>
+      <br>
+        <app-shopping-list *ngIf = 'feature !== "receipe"'></app-shopping-list>
+>>>>>>> 3867134e7c8796899a420ddf73d9c94d62b9eaed
     </div>
   </div>
 </div>

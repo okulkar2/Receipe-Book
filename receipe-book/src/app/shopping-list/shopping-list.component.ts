@@ -15,4 +15,8 @@ export class ShoppingListComponent{
 
     constructor(){
     }
+
+    onIngredientAdded(newData: Ingredient){
+        this.ingredients.push(newData);
+    }
 }

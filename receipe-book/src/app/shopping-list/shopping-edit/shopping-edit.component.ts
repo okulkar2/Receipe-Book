@@ -8,8 +8,11 @@ import { Ingredient } from '../../shared/ingredients.model';
 
 export class ShoppingEditComponent{
     @Output() newIngredient = new EventEmitter<Ingredient>();
+    ingredient: Ingredient;
 
     onAdd(nameIn: HTMLInputElement, amountIn: HTMLInputElement){
-        this.newIngredient.emit(new Ingredient(nameIn.value,parseInt(amountIn.value)));        
+
+        this.ingredient = new Ingredient(nameIn.value,parseInt(amountIn.value))
+        this.newIngredient.emit(this.ingredient);        
     }
 }

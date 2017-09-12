@@ -4,8 +4,7 @@ import { ShoppingService } from './shopping.service'
 
 @Component({
     selector: 'app-shopping-list',
-    templateUrl: './shopping-list.component.html',
-    providers: [ShoppingService]
+    templateUrl: './shopping-list.component.html'
 })
 
 export class ShoppingListComponent implements OnInit{
@@ -16,5 +15,10 @@ export class ShoppingListComponent implements OnInit{
 
     ngOnInit(){
         this.ingredients = this.shoppingService.getIngredients();
+        this.shoppingService.ingredientChanged.subscribe(
+            (newIngredient: Ingredient[]) => {
+                this.ingredients = newIngredient;
+            }
+        )
     }
 }

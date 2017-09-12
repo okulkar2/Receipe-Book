@@ -15,7 +15,7 @@
             <button type="button" class="btn btn-primary dropdown-toggle">
                 Manage Receipe <span class="caret"></span></button> 
             <ul class="dropdown-menu">
-                <li><a href="#">Add to Shopping List</a></li>
+                <li><a href="#" (click) = "pushIngredients()">Add to Shopping List</a></li>
                 <li><a href="#">Edit Receipe</a></li>
                 <li><a href="#">Delete Receipe</a></li>
             </ul>
@@ -29,7 +29,12 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <h4>Ingredients</h4>
+        <ul class="list-group">
+            <li class="list-group-item"
+            *ngFor = "let ingredient of receipeElement.getIngredients()">
+            {{ ingredient.name }} - {{ ingredient.amount }}
+            </li>
+        </ul>
     </div>
 </div>
 

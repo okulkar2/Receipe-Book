@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Ingredient } from '../../shared/ingredients.model';
+=======
+import { Component } from '@angular/core';
+import { Ingredient } from '../../shared/ingredients.model';
+import { ShoppingService } from '../shopping.service'
+>>>>>>> 1e86c75a8b3548191ef26da1d3d1bcb5040f3b94
 
 @Component({
     selector: 'app-shopping-edit',
@@ -7,10 +13,21 @@ import { Ingredient } from '../../shared/ingredients.model';
 })
 
 export class ShoppingEditComponent{
+<<<<<<< HEAD
     @Output() newIngredient = new EventEmitter<Ingredient>();
 
     onAdd(nameIn: HTMLInputElement, amountIn: HTMLInputElement){
         const newIn = new Ingredient(nameIn.value, parseInt(amountIn.value));
         this.newIngredient.emit(newIn);        
+=======
+
+    constructor(private shoppingService: ShoppingService) {}
+
+    onAdd(nameIn: HTMLInputElement, amountIn: HTMLInputElement){
+
+        const ingredient = new Ingredient(nameIn.value, parseInt(amountIn.value));
+        this.shoppingService.addIngredient(ingredient);
+
+>>>>>>> 1e86c75a8b3548191ef26da1d3d1bcb5040f3b94
     }
 }

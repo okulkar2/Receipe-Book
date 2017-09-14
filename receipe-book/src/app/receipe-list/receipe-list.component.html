@@ -8,20 +8,18 @@
         <hr>
         <div class="row">
             <div class="col-xs-12">
-                <a href="#" class="list-group-item clearfix" *ngFor="let recipe of receipes">
-                    <span class="pull-left">
-                        <h4 class="list-group-item-heading">{{ recipe.getName() }}</h4>
-                        <p class="list-group-item-text">{{ recipe.getDescription() }}</p>
-                    </span>
-                    <span class="pull-right">
-                        <img src= '{{ recipe.getImage() }}' alt="{{ recipe.getName() }}" class="img-responsive" style="max-height: 50px"> 
-                    </span>
-                </a>
+                <app-receipe-item *ngFor = "let receipe of receipes"
+                 [element] = "receipe"
+                 (selectedElement)="selectedReceipe = receipe"></app-receipe-item>
             </div>
         </div>
-        <app-receipe-item></app-receipe-item>
     </div>    
     <div class="col-md-7">
-        <app-receipe-detail></app-receipe-detail>
+        <app-receipe-detail
+        *ngIf = "selectedReceipe; else InfoText" 
+        [receipeElement] = "selectedReceipe"></app-receipe-detail>
+        <ng-template #InfoText>
+            <h3>Please select a Receipe</h3>
+        </ng-template>
     </div>
 </div>

@@ -20,9 +20,12 @@ export class ShoppingListComponent implements OnInit{
                 this.ingredients = newIngredient;
             }
         )
+<<<<<<< HEAD
     }
 
     onIngredientAdded(newData: Ingredient){
         this.ingredients.push(newData);
+=======
+>>>>>>> 1e86c75a8b3548191ef26da1d3d1bcb5040f3b94
     }
 }

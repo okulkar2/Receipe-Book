@@ -7,13 +7,13 @@ import { ShoppingService } from '../shopping.service'
     templateUrl: './shopping-edit.component.html'
 })
 
-export class ShoppingEditComponent{
+export class ShoppingEditComponent {
 
     constructor(private shoppingService: ShoppingService) {}
 
-    onAdd(nameIn: HTMLInputElement, amountIn: HTMLInputElement){
+    onAdd(nameIn: HTMLInputElement, amountIn: HTMLInputElement) {
 
-        const ingredient = new Ingredient(nameIn.value, parseInt(amountIn.value));
+        const ingredient = new Ingredient(nameIn.value, +amountIn.value);
         this.shoppingService.addIngredient(ingredient);
     }
 }

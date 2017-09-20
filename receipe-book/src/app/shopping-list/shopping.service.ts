@@ -1,8 +1,8 @@
-import { EventEmitter } from '@angular/core'
-import { Ingredient } from '../shared/ingredients.model'
+import { EventEmitter } from '@angular/core';
+import { Ingredient } from '../shared/ingredients.model';
     
-export class ShoppingService{
-    
+export class ShoppingService {
+
     ingredientChanged = new EventEmitter<Ingredient[]>(); 
 
     private ingredients: Ingredient[] = [];    

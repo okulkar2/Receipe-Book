@@ -22,13 +22,17 @@ export class ReceipeService{
         [
             new Ingredient('Paneer', 1),
             new Ingredient('Spices', 6)
-        ])   
+        ])
     ];
 
-    receipeSelected = new EventEmitter<Receipe>();
+    //receipeSelected = new EventEmitter<Receipe>();
 
-    getReceipes(){
+    getReceipes() {
         return this.receipes.slice();
+    }
+
+    getSingleReceipe(id: number) {
+        return this.receipes[id];
     }
 
 }

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -30,6 +31,7 @@ import { ReceipeEditComponent } from './receipe-list/receipe-edit/receipe-edit.c
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRouterModule
   ],
   providers: [ShoppingService],

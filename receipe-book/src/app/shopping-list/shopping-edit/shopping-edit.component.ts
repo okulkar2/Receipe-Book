@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Ingredient } from '../../shared/ingredients.model';
 import { ShoppingService } from '../shopping.service'
 
@@ -11,9 +12,9 @@ export class ShoppingEditComponent {
 
     constructor(private shoppingService: ShoppingService) {}
 
-    onAdd(nameIn: HTMLInputElement, amountIn: HTMLInputElement) {
-
-        const ingredient = new Ingredient(nameIn.value, +amountIn.value);
+    newItemAdded(form: NgForm) {
+        const value = form.value;
+        const ingredient = new Ingredient(value.name, +value.amount);
         this.shoppingService.addIngredient(ingredient);
     }
 }

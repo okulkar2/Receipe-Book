@@ -14,6 +14,7 @@ export class ShoppingService {
     getSingleIngredient(index: number) {
         return this.ingredients[index];
     }
+
     addIngredient(ingredient: Ingredient) {
         this.ingredients.push(ingredient);
         this.ingredientChanged.emit(this.ingredients.slice());
